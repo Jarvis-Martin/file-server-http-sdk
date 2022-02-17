@@ -1,0 +1,11 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ú¨µÌ
+\
+java:S1854!":Remove this useless assignment to local variable "string".(ë»³¥şÿÿÿÿ8‡òäâï/
+M
+java:S1481!"+Remove this unused "string" local variable.(ë»³¥şÿÿÿÿ8‹òäâï/
+Y
+java:S1128"<Remove this unused import 'com.alibaba.fastjson.JSONObject'.(äıµ8‹Ôîâï/
+Q
+java:S1128"4Remove this unused import 'io.netty.buffer.ByteBuf'.(¬¶ç›8ŒÔîâï/
