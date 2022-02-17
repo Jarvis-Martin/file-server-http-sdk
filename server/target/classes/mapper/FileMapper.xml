@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiyuesuotest.server.infrastructure.dao.FileMapper">
+    <resultMap id="BaseResultMap" type="com.qiyuesuotest.server.infrastructure.po.UploadFilePO">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="file_name" jdbcType="CHAR" property="fileName"/>
+        <result column="file_size" jdbcType="INTEGER" property="fileSize"/>
+        <result column="file_type" jdbcType="VARCHAR" property="fileType"/>
+        <result column="file_orign_name" jdbcType="VARCHAR" property="fileOriginalName"/>
+        <result column="create_time" jdbcType="BIGINT" property="createTime"/>
+        <result column="file_directory" jdbcType="CHAR" property="fileDirectory"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id
+        , file_name, file_size, file_type, file_orign_name, create_time, file_directory
+    </sql>
+    <insert id="insertOne">
+        insert into file(file_name, file_size, file_type, file_orign_name, create_time, file_directory)
+        values (#{fileName}, #{fileSize}, #{fileType}, #{fileOriginalName}, #{createTime},
+                #{fileDirectory})
+    </insert>
+    <select id="findOne" resultType="com.qiyuesuotest.server.infrastructure.po.UploadFilePO" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"></include> from file where file_name = #{fileName}
+    </select>
+
+
+</mapper>

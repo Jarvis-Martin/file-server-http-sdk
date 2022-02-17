@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: file-server
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.193.129:3306/fileserver?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+      username: test
+      password: mysqladmin123
+
+file-root-path: D:/files
+mybatis:
+  mapper-locations: mapper/*Mapper.xml
